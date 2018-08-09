@@ -1,0 +1,248 @@
+@dc-fb-color-a: #E1E1E1;
+@dc-bg-color: #f2f2f2;
+@dc-bg-color-a: #293E98;
+@dc-bg-color-b: #67b253;
+@dc-fs-color-a: #bbb;
+@dc-fs-color-b: red;
+@dc-fs: 14px;
+@dc-lh: 32px;
+@dc-lh-a: 50px;
+@sel-box-size: 6px;
+
+.dc-arrow-bottom {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-top: 12px;
+  border-top: @sel-box-size solid #fff;
+  border-left: @sel-box-size solid transparent;
+  border-right: @sel-box-size solid transparent;
+}
+
+.dc-arrow-top {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-top: 12px;
+  border-bottom: @sel-box-size solid #fff;
+  border-left: @sel-box-size solid transparent;
+  border-right: @sel-box-size solid transparent;
+}
+
+.dc-report-edit {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  .dc-edit-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 400px;
+    .dc-edit-filter {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 199px;
+      border-right: 1px solid @dc-fb-color-a;
+      border-top: 1px solid @dc-fb-color-a;
+      div {
+        font-size: @dc-fs;
+        line-height: @dc-lh;
+        &.dc-p {
+          background-color: @dc-bg-color;
+        }
+        &.dc-p-active {
+          >p {
+            background-color: @dc-bg-color-a;
+            border-bottom: 1px solid #fff;
+            text-align: left;
+            padding: 0 10px;
+            color: #fff;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+          >ul {
+            text-align: left;
+            &.dis {
+              display: none;
+            }
+            >li {
+              padding: 0 18px;
+              .dc-inline {
+                font-size: 10px !important;
+                color: #fff;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                line-height: 20px;
+                text-align: center;
+                &.str {
+                  background-color: @dc-bg-color-a;
+                }
+                &.val {
+                  background-color: @dc-bg-color-b;
+                }
+              }
+              &.dc-li1{
+                position: relative;
+                &:hover{
+                  cursor: pointer;
+                  background-color: @dc-bg-color;
+                  .dc-arrow-bottom {
+                    border-top: @sel-box-size solid #333;
+                  }
+                }
+              }
+              .dc-li2{
+                &:hover{
+                  cursor: pointer;
+                  background-color: @dc-bg-color;
+                  .dc-arrow-bottom {
+                    border-top: @sel-box-size solid #333;
+                  }
+                }
+              }
+              &.dc-li{
+                position: relative;
+                >.dc-ul-menu{
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  z-index: 1;
+                  background-color: #fff;
+                  border: 1px solid @dc-fb-color-a;
+                  >li{
+                    padding: 0 10px;
+                    .dc-inline{
+                      width: 60px;
+                      text-align: left;
+                      color: #000;
+                    }
+                    &:hover{
+                      background-color: @dc-bg-color;
+                    }
+                  }
+                }
+              }
+              &:hover{
+                cursor: pointer;
+                background-color: @dc-bg-color;
+              }
+            }
+          }
+        }
+        &.dc-filter-sel {
+          border-top: 1px solid @dc-fb-color-a;
+          border-bottom: 1px solid @dc-fb-color-a;
+          margin: 10px 0;
+          >select {
+            width: 100%;
+            padding: 0 10px;
+            border-color: #fff;
+          }
+        }
+      }
+    }
+    .dc-edit-setting {
+      position: absolute;
+      top: 0;
+      left: 200px;
+      bottom: 0;
+      width: 199px;
+      border-right: 1px solid @dc-fb-color-a;
+      .dc-p {
+        border-bottom: 1px solid @dc-fb-color-a;
+        padding: 10px;
+        margin-bottom: 10px;
+        ul {
+          font-size: 14px;
+          margin-top: 10px;
+          li {
+            line-height: @dc-lh;
+            .dc-fr {
+              color: @dc-fs-color-a;
+            }
+            &.dc-li {
+              text-align: center;
+              background-color: @dc-fs-color-a;
+            }
+          }
+        }
+      }
+    }
+  }
+  .dc-edit-rigth {
+    position: absolute;
+    left: 400px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    .dc-show-canvas {
+      position: relative;
+      height: 100%;
+      .dc-show-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        font-size: @dc-fs;
+        overflow: hidden;
+        ul {
+          border-bottom: 1px solid @dc-fb-color-a;
+          min-width: 1000px;
+          >li {
+            min-width: 10%;
+            text-align: center;
+            display: inline-block;
+            line-height: @dc-lh-a;
+            border-right: 1px solid @dc-fb-color-a;
+            &:last-child {
+              border-right: none;
+            }
+          }
+        }
+        .dc-setting-cr {
+          border-bottom: 1px solid @dc-fb-color-a;
+          padding: 10px 0;
+          min-width: 1000px;
+          >.dc-p {
+            >span.dc-inline {
+              width: 100px;
+              text-align: right;
+              .dc-red {
+                color: @dc-fs-color-b;
+              }
+            }
+            >div.dc-inline {
+              line-height: @dc-lh;
+            }
+            >div.dc-area {
+              width: 300px;
+              min-height: 32px;
+              line-height: 32px;
+              border: 1px solid @dc-fb-color-a;
+            }
+          }
+        }
+      }
+      .dc-show-chart {
+        position: absolute;
+        top: 214px;
+        left: 0;
+        right: 0;
+        bottom: 60px;
+        overflow: auto;
+        background-color: @dc-bg-color;
+        // >div {
+        //   // width: 1000px;
+        //   margin: auto;
+        // }
+      }
+    }
+  }
+}

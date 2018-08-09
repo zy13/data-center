@@ -1,0 +1,43 @@
+.go-to-top,
+.go-to-bottom{
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 150px;
+  right: 0;
+  background-color: #000;
+  opacity: 0.5;
+  filter:alpha(opacity=50);
+  font-size:20px;
+  color:#fff;
+  text-align: center;
+  line-height: 38px;
+  cursor: pointer;
+  // display: none;
+  i{
+    vertical-align: middle;
+    font-size: 12px;
+  }
+  &:hover{
+    background: #293E98;
+    opacity: 0.8;
+    filter:alpha(opacity=80);
+  }
+}
+.dc-to-top{
+  display: none;
+}
+.go-to-top{
+  display: none;
+}
+.go-to-bottom{
+  bottom: 100px;
+  display: none;
+  i{
+    display: inline-block;
+    transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    -ms-transform:rotate(180deg);
+  }
+}
+

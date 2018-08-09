@@ -1,0 +1,26 @@
+[
+  {
+    "name": "求和",
+    "type": "sum"
+  },
+  {
+    "name": "平均",
+    "type": "avg"
+  },
+  {
+    "name": "中间值",
+    "type": "mid"
+  },
+  {
+    "name": "最大值",
+    "type": "max"
+  },
+  {
+    "name": "最小值",
+    "type": "min"
+  },
+  {
+    "name": "计数",
+    "type": "count"
+  }
+]

@@ -1,0 +1,116 @@
+@fcircle: 30px;
+@fsubCircle: 22px;
+.dc-circles-inline{
+  display: inline-block;
+  height: 40px;
+  .circle-group {
+    vertical-align: middle;
+    position: relative;
+    .dc-circle1,
+    .dc-circle2 {
+      display: inline-block;
+      width: @fcircle;
+      height: @fcircle;
+      border-radius: 50%;
+      position: absolute;
+      top: -4px;
+      left: 0;
+      &.dc-circle2{
+        left: 18px;
+      }
+      >span{
+        display: inline-block;
+      }
+    }
+    &.inline {
+      display: block !important;
+      .dc-circle1{
+        width: @fcircle + 2;
+        height: @fcircle + 2;
+        background-color: rgba(41, 62, 152, 0.38);
+        // border: 1px solid rgba(41, 62, 152, 0.38);
+        >span{
+          width: @fsubCircle;
+          height: @fsubCircle;
+          border-radius: 50%;
+          background-color: #293e98;
+          margin-top: 5px;
+          margin-left: 5px;
+        }
+      }
+      .dc-circle2 {
+        width: @fcircle - 2;
+        height: @fcircle - 2;
+        border: 1px solid #293e98;
+      }
+    }
+    &.left {
+      .dc-circle1{
+        width: @fcircle + 2;
+        height: @fcircle + 2;
+        background-color: rgba(170, 170, 170, 0.48);
+        >span{
+          width: @fsubCircle;
+          height: @fsubCircle;
+          border-radius: 50%;
+          background-color: #aaa;
+          margin-top: 5px;
+          margin-left: 0;
+        }
+      }
+      .dc-circle2 {
+        width: @fcircle - 2;
+        height: @fcircle - 2;
+        border: 1px solid #aaa;
+      }
+    }
+    &.right {
+      .dc-circle1{
+        width: @fcircle - 2;
+        height: @fcircle - 2;
+        border: 1px solid #aaa;
+      }
+      .dc-circle2 {
+        width: @fcircle + 2;
+        height: @fcircle + 2;
+        background-color: rgba(170, 170, 170, 0.48);
+        >span{
+          width: @fsubCircle;
+          height: @fsubCircle;
+          border-radius: 50%;
+          background-color: #aaa;
+          margin-top: 5px;
+          margin-left: 0;
+        }
+      }
+    }
+    &.out {
+      .dc-circle1{
+        width: @fcircle + 2;
+        height: @fcircle + 2;
+        background-color: #D8D8D8;
+        >span{
+          width: @fsubCircle;
+          height: @fsubCircle;
+          border-radius: 50%;
+          background-color: #aaa;
+          margin-top: 5px;
+          margin-left: 0;
+        }
+      }
+      .dc-circle2 {
+       width: @fcircle + 2;
+        height: @fcircle + 2;
+        background-color: #D8D8D8;
+        >span{
+          width: @fsubCircle;
+          height: @fsubCircle;
+          border-radius: 50%;
+          background-color: #aaa;
+          margin-top: 5px;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

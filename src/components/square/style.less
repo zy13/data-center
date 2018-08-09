@@ -1,0 +1,106 @@
+@bd-color: #888;
+.dc-chart-square{
+  max-width: 800px;
+  margin: auto;
+  width: 660px;
+  min-height: 450px;
+  background-color: #fff;
+  .dc-table{
+    background-color: #fff;
+    padding-top: 60px;
+    padding-right: 70px;
+    padding-bottom: 20px;
+    margin: auto;
+    max-width: 800px;
+    .dc-table-item{
+      >div{
+        border: none;
+        &.item{
+          border-left: 1px solid @bd-color;
+          border-bottom: 1px solid @bd-color;
+          text-decoration: underline;
+          height: 73px;
+          position: relative;
+          &.dc-border-top{
+            border-top: 1px solid @bd-color;
+          }
+          label{
+            display: none;
+          }
+          &:hover{
+            cursor: pointer;
+            label{
+              display: block;
+              position: absolute;
+              z-index: 1;
+              width: 100%;
+              background-color: #000;
+              opacity: 0.6;
+              border-radius: 4px;
+              left: 50px;
+              top: 50px;
+              color: #fff;
+              >span{
+                display: block;
+              }
+            }
+          }
+          .dc-yArix-y{
+            height: 91px;
+            position: absolute;
+            top: 3px;
+            left: -8px;
+            border-right: 2px solid #288add;
+          }
+        }
+      }
+      >div.item:last-child{
+        border-right: 1px solid @bd-color;
+      }
+      .dc-xaxis-item,
+      .dc-axis-blank{
+        position: relative;
+        .span-blank-cont{
+          position:absolute;
+          width: 92px;
+          top: 4px;
+          left: -7px;
+          border-top: 2px solid #288add;
+          .arrow-rigth{
+            width: 0;
+            height: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-left: 8px solid #288add;
+            line-height: 0;
+            position: absolute;
+            top: -9px;
+            right: 0;
+          }
+        }
+      }
+    }
+    .dc-yArix-y-top{
+      position: relative;
+      height: 38px;
+      .span-blank-cont{
+        position: absolute;
+        height: 100%;
+        border-right: 2px solid #288add;
+        right: 5px;
+        top: 4px;
+        .dc-arrow-top{
+          width: 0;
+          height: 0;
+          border-left: 8px solid transparent;
+          border-right: 8px solid transparent;
+          border-bottom: 8px solid #288add;
+          line-height: 0;
+          position: absolute;
+          top: -8px;
+          right: -9px;
+        }
+      }
+    }
+  }
+}

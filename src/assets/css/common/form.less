@@ -1,0 +1,89 @@
+input[type='text'],
+input[type='number'],
+textarea{
+  color: #333;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  &.dc-default{
+    width: 220px;
+    height: 32px;
+    line-height: 32px;
+    border: 1px solid @dc-fb-color-b;
+    padding: 0 4px;
+  }
+}
+
+select{
+  outline: none;
+}
+
+// 复选框样式
+.dc-input-check{
+  input[type='checkbox'] {
+    display: none;
+    &+label{
+      top:3px;
+      width: 18px;
+      height: 18px;
+      border-radius: 5px;
+      background: #fff;
+      cursor: pointer;
+      display:inline-block;
+      position: relative;
+      box-shadow: 0 0 16px rgba(41, 62, 152, 0.31);
+      background-color: #fff;
+      margin-right: 10px;
+    }
+    &:checked+label:after{
+       content: '';
+       width: 8px;
+       height: 4px;
+       position: absolute;
+       top: 5px;
+       left: 4px;
+       border: 2px solid #293E99;
+       border-top: none;
+       border-right: none;
+       opacity: 0.4;
+       transform: rotate(-45deg);
+
+       opacity: 1;
+       border-top: none;
+       border-right: none;
+    }
+  }
+}
+
+// 单选框样式
+.dc-input-radio{
+  input[type='radio'] {
+    display: none;
+    &+label{
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #bbb;
+      cursor: pointer;
+      display:inline-block;
+      position: relative;
+      top: 3px;
+      -moz-box-shadow:1px 1px 1px #999 inset; /* For Firefox3.6+ */
+      -webkit-box-shadow:1px 1px 1px #999 inset; /* For Chrome5+, Safari5+ */
+      box-shadow:1px 1px 1px #999 inset; /* For Latest Opera */
+    }
+    &:checked+label:after{
+      content: '';
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      background: #293D97;
+      border-radius: 50%;
+    }
+  }
+  >span{
+    padding-left: 4px;
+  }
+}

@@ -1,0 +1,202 @@
+@dc-fb-color-a: #ccc;
+@dc-fs-color: #000;
+@dc-bg-color-b: #293E98;
+@dc-fb-color-c: #f2f2f2;
+@distance: 60px;
+@dc-lh: 32px;
+body {
+  overflow: hidden;
+  >div {
+    height: 100%;
+    width: 100%;
+    .dc-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 60px;
+      line-height: 60px;
+    }
+    .dc-wrapper {
+      width: 100%;
+      height: 100%;
+      padding-top: @distance;
+      .dc-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        .dc-main {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          .dc-report-list {
+            height: 100%;
+            .dc-list-sider {
+              width: 220px;
+              height: 100%;
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              overflow-y: inherit;
+              background: #fff;
+              border-right: 1px solid @dc-fb-color-a;
+              .sider-header {
+                padding: 20px;
+                border-bottom: 1px solid @dc-fb-color-a;
+                >span.dc-fr {
+                  font-size: 22px;
+                  &:hover {
+                    cursor: pointer;
+                  }
+                }
+                .add-tip {
+                  position: absolute;
+                  top: 50px;
+                  right: -30px;
+                  font-size: 12px;
+                  z-index: 1;
+                  width: 100px;
+                  text-align: center;
+                  line-height: @dc-lh;
+                  border: 1px solid @dc-fb-color-a;
+                  background-color: #fff;
+                  >div {
+                    &:first-child {
+                      padding-bottom: 10px;
+                    }
+                    &:hover {
+                      cursor: pointer;
+                    }
+                  }
+                }
+              }
+              .report-list-contaienr {
+                .list {
+                  border-bottom: 1px solid @dc-fb-color-a;
+                  font-size: 14px;
+                  .dc-p{
+                    padding: 10px;
+                    position: relative;
+                    &:hover{
+                      cursor: pointer;
+                    }
+                    .add-tip {
+                      padding-top: 10px;
+                      position: absolute;
+                      top: 40px;
+                      right: -30px;
+                      font-size: 12px;
+                      z-index: 1;
+                      width: 100px;
+                      text-align: center;
+                      border: 1px solid @dc-fb-color-a;
+                      background-color: #fff;
+                      >div {
+                        padding-bottom: 10px;
+                        &:hover {
+                          cursor: pointer;
+                        }
+                      }
+                      &.dis{
+                        display: none;
+                      }
+                    }
+                  }
+                  .sub-list {
+                    border-top: 1px solid @dc-fb-color-a;
+                    li {
+                      padding: 0 20px;
+                      &:hover{
+                        cursor: pointer;
+                      }
+                    }
+                    &.active {
+                      display: none;
+                    }
+                  }
+                }
+              }
+            }
+            .dc-list-main {
+              position: absolute;
+              top: 0;
+              left: 221px;
+              right: 0;
+              bottom: 0;
+              .dc-main-header {
+                background: #fff;
+                border-bottom: 1px solid @dc-fb-color-a;
+                height: 60px;
+                line-height: 60px;
+                text-align: right;
+                font-size: 14px;
+                padding: 0 50px;
+                .dc-export-report {
+                  position: relative;
+                  >div {
+                    position: absolute;
+                    top: 45px;
+                    right: 0;
+                    background-color: #fff;
+                    z-index: 2;
+                    >div {
+                      line-height: @dc-lh;
+                      width: 100px;
+                      text-align: center;
+                    }
+                  }
+                }
+                >div {
+                  >span,
+                  >a {
+                    color: @dc-fs-color;
+                    padding: 4px 10px;
+                    border: 1px solid @dc-fb-color-a;
+                    border-radius: 2px;
+                    &:hover {
+                      cursor: pointer;
+                      background-color: @dc-bg-color-b;
+                      color: #fff;
+                      border-color: @dc-bg-color-b;
+                    }
+                  }
+                }
+              }
+              .dc-main-body {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                bottom: 60px;
+                border-bottom: 1px solid @dc-fb-color-a;
+                overflow: auto;
+                background-color: @dc-fb-color-c; // scrollbar-face-color: #fcfcfc;
+                // scrollbar-highlight-color: #6c6c90;
+                // scrollbar-shadow-color: #fcfcfc;
+                // scrollbar-3dlight-color: #fcfcfc;
+                // scrollbar-arrow-color: #240024;
+                // scrollbar-track-color: #fcfcfc;
+                // scrollbar-darkshadow-color: #48486c;
+                // scrollbar-base-color: #fcfcfc;
+                .dc-canvas {
+                  // width: 1000px;
+                  margin: auto;
+                }
+              }
+            }
+            .modal-content-container {
+              text-align: center;
+              font-size: 14px;
+              margin-top: 30px;
+              >span {
+                padding-right: 4px;
+                .dc-red {
+                  color: red;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

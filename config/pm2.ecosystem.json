@@ -1,0 +1,34 @@
+{
+    "deploy": {
+        "dev": {
+            "user": "root",
+            "host": [{
+                "host": "192.168.2.39",
+                "port": "22"
+            }],
+            "ref": "origin/develop",
+            "repo": "git@gitlab.cepin.com:zyuan/data-center.git",
+            "path": "/home/local/datacenter",
+            "post-deploy": "npm install; npm update; npm run build",
+            "env": {
+                "NODE_ENV": "dev",
+                "PORT": "9500"
+            }
+        },
+        "fast-dev": {
+          "user": "root",
+            "host": [{
+                "host": "192.168.2.39",
+                "port": "22"
+            }],
+            "ref": "origin/develop",
+            "repo": "git@gitlab.cepin.com:zyuan/data-center.git",
+            "path": "/home/local/datacenter",
+            "post-deploy": "npm run build",
+            "env": {
+                "NODE_ENV": "dev",
+                "PORT": "9500"
+            }
+        }
+    }
+}

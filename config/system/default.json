@@ -1,0 +1,34 @@
+{
+  "development": {
+    "api": {
+      "host": "http://datacenter.cepin.net",
+      "path": "/api/datacenter",
+      "mock": false
+    },
+    "static": {
+      "staticPort": "9005",
+      "srcHost": "/"
+    }
+  },
+  "test": {
+    "api": {
+      "host": "http://datacenter.cepin.net",
+      "path": "/dcapi",
+      "mock": false
+    },
+    "static": {
+      "srcHost": "/"
+    }
+  },
+  "production": {
+    "api": {
+      "host": "http://testapi.tas.cepin.net",
+      "path": "/dcapi",
+      "mock": false
+    },
+    "static": {
+      "staticPort": "9001",
+      "srcHost": "/"
+    }
+  }
+}

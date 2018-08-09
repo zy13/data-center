@@ -1,0 +1,57 @@
+@sel-box-size: 6px;
+.dc-select-box{
+  font-size: 12px;
+  vertical-align: top;
+  .dc-select-container{
+    .dc-sel-val{
+      width: 210px;
+      border: 1px solid #e5e5e5;
+      height: 32px;
+      line-height: 32px;
+      border-radius: 2px;
+      padding: 0 4px;
+      &:hover{
+        cursor: pointer;
+      }
+      .val{
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: keep-all;
+        width: 90%;
+      }
+      .arrow{
+        float: right;
+        width: 0;
+        height: 0;
+        border-top: @sel-box-size solid #333;
+        border-left: @sel-box-size solid transparent;
+        border-right: @sel-box-size solid transparent;
+        margin-top: 12px;
+      }
+    }
+    ul.dc-sel-box{
+      width: 218px;
+      border: 1px solid #e5e5e5;
+      border-top: 0;
+      &.dis{
+        display: none;
+      }
+      li{
+        line-height: 28px;
+        padding: 0 4px;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: keep-all;
+        width: 90%;
+        &:hover{
+          cursor: pointer;
+        }
+        &.active{
+          background-color: #e5e5e5;
+        }
+      }
+    }
+  }
+}
